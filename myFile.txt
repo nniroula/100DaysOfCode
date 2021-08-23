@@ -1,0 +1,4 @@
+Hello all, this is Nabin Niroula and would like to go over basics of reading and writing to and from a file in python.
+Ok
+
+This is my first time ever programming in Python and would like to learn web development in Python programming language.
