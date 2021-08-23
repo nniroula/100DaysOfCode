@@ -108,8 +108,93 @@ class Plane():
     def get_crew_members(self):
         return self.crew_members
 
-# Multiple Inheritance
-class hybrid(Vehicle, Plane):
+# BEST INHERITANCE EXAMPLE
+
+class A:
+    """ contains common functionalities """
+
+    print("THIS IS FROM CLASS A ......................")
+
+    # make class varibales
+    input1 = int(input("Please enter your first number: "))
+    input2 = int(input("Enter second number: "))
+
+    def __init__(self):
+        self.value1 = "None"
+        self.value2 = "None"
+
+        self.set_value1()
+        self.set_value2()
+        self.get_value1()
+        self.get_value2()
+
+    def set_value1(self):
+        self.value1 = A.input1
+
+    def set_value2(self):
+        self.value2 = A.input2
+    
+    def get_value1(self):
+        return self.value1
+
+    def get_value2(self):
+        return self.value2
+    
+# check if class A works as expected
+
+# a = A()
+# a.set_value1()
+# a.set_value2()
+# print(f"The first number is {a.get_value1()}.")
+# print(f"The second number is {a.get_value2()}.")
+
+# SINGLE INHERITANCE
+class B(A):
+    """ Contains add and subtract method method. """
+
+    print("THIS STARTS CLASS B ................ ")
+
+    def __init__(self):
+        super().__init__()
+        self.add()
+        self.subtract()
+       
+    def add(self):
+        # return super().get_value1() + super().get_value2()
+        ans = super().get_value1() + super().get_value2()
+        return f"The sum is {ans}."
+
+    def subtract(self):
+        difference = super().get_value2() - super().get_value1()
+        return f"The difference is {difference}."
+
+# Check if class B works as expected 
+b = B()
+# print(b.add())
+# print(b.subtract())
+
+# MULTIPLE INHERITANCE
+
+class C(B):
+    """ Inherits from both classes A and B. And also contains divide method. When you inherit from B, and since B inherits 
+    from A, you automatically inherit from A. 
+    """
+
+    print("CLASS C STARTS HERE..........")
+    def __init__(self):
+        super().__init__()
+
+        self.multiply()
+    
+    def multiply(self):
+        product = super().get_value1() * super().get_value2()  # these are in class A
+        return f"The product is {product}."
+
+# check if class C works properly
+c = C()
+print(c.multiply())
+
+
     
 
 
