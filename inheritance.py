@@ -151,7 +151,7 @@ class A:
 # SINGLE INHERITANCE
 class B(A):
     """ Contains add and subtract method method. """
-
+    print("\n")
     print("THIS STARTS CLASS B ................ ")
 
     def __init__(self):
@@ -179,20 +179,133 @@ class C(B):
     """ Inherits from both classes A and B. And also contains divide method. When you inherit from B, and since B inherits 
     from A, you automatically inherit from A. 
     """
-
+    print("\n")
     print("CLASS C STARTS HERE..........")
     def __init__(self):
         super().__init__()
 
         self.multiply()
+        self.showVariablesinA()
     
     def multiply(self):
         product = super().get_value1() * super().get_value2()  # these are in class A
         return f"The product is {product}."
+    
+    def showVariablesinA(self):
+        return f"The values you in entered in class A are {A.input1} and {A.input2}."
 
 # check if class C works properly
 c = C()
-print(c.multiply())
+# print(c.multiply())
+# print(c.showVariablesinA())
+
+# Now MULTI-LEVEL INHERITANCE, and Method Resolution Order(MRO)
+# create two classes and have third class inherit both two classes
+
+class Student:
+    """This class gets a student name. """
+    stdName = input("Enter the student's name: ")
+
+    def __init__(self):
+        self.name = "None"
+        self.set_studentName()
+        self.get_studentName()
+    
+    def set_studentName(self):
+        inputName = Student.stdName
+        self.name = inputName
+    
+    def get_studentName(self):
+        return Student.stdName
+    
+# check to test if class Student works properly
+student = Student()
+# print(f"The student's name is {student.get_studentName()}.")
+
+class TestScores:
+    """ this class gets a student's test scores. """
+    def __init__(self):
+        print("__init__ for TestScores")
+        self.test1 = "None"
+        self.test2 = "None"
+        self.test3 = "None"
+
+        self.set_test1()
+        self.set_test2()
+        self.set_test3()
+
+        self.get_test1()
+        self.get_test2()
+        self.get_test3()
+
+    def set_test1(self):
+        input1 = int(input("Enter test1 score: "))
+        self.test1 = input1
+    
+    def set_test2(self):
+        input2 = int(input("Enter test2 score: "))
+        self.test2 = input2
+
+    def set_test3(self):
+         input3 = int(input("Enter test3 score: "))
+         self.test3 = input3
+
+    def get_test1(self):
+        return self.test1
+    
+    def get_test2(self):
+        return self.test2
+    
+    def get_test3(self):
+        return self.test3
+
+# check if TestScore class works fine
+# test = TestScores()
+# print(f"The test 1 score is {test.get_test1()}.")
+# print(f"The test 2 score is {test.get_test2()}")
+# print(f"The test 3 score is {test.get_test3()}")
+
+class Grades(Student, TestScores):
+    def __init__(self):
+        Student.__init__(self)
+        TestScores.__init__(self)
+        #self.calculate_average()\  # this causes print statement in calculate_average() to print twice - once in __init__ and once in method itself.
+    
+    def calculate_average(self):
+        # sum = TestScores.get_test1(self) + TestScores.get_test2(self) + TestScores.get_test3(self)
+        sum = TestScores.get_test1(self) + TestScores.get_test2(self) + TestScores.get_test3(self)
+        average = sum//3
+        print(f"Your average socre is {average}.")
+
+        if average >= 90:
+            return f"A"
+        elif average >= 80:
+            return f"B"
+        elif average >= 70:
+            return f"C"
+        elif average >= 60:
+            return f"D"
+        else:
+            return f"F"
+        
+    def show_student_name(self):
+        return Student.get_studentName(self)
+
+# check if class Grades works properly
+grade = Grades()
+print(f"Hello, {grade.show_student_name()}, your grade is {grade.calculate_average()}.")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
