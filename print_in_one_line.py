@@ -17,3 +17,7 @@ print(num1, end=" ")
 print(num2, end=" ")
 print(num3)
 
+college = "Univeristy of Colorado Denver"
+print(college, end="locate in the hear of Down town Denver in Colorado. ")
+print()
+
