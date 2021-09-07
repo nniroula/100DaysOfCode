@@ -8,6 +8,11 @@ x = 1
 # print(type("hello"))
 
 class Dog:
+    # constructor for Dog class
+    def __init__(self):
+        print("This is __init__ method. ")
+        self.bark()
+        self.legs()
     def bark(self):
         print("bark")
     
