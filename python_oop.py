@@ -52,16 +52,26 @@ class Dog2:
         # self.name = name
         # self.age = age
         # if it says that name is not defined, set it to "None"  for initialization
-        self.name = "None"
-        self.age = "None"
+        # self.name = "None" # Or set it to empty string
+        self.name = " "
+        # self.age = "None" # Or set it to 0
+        self.age = 0
 
     def set_name(self, new_name):
         self.name = new_name
     
+    def set_age(self, age):
+        self.age = age
+    
     def get_name(self):
         return self.name
 
+    def get_age(self):
+        return self.age
+
 dog_1 = Dog2()
 dog_1.set_name("Eunta")
+dog_1.set_age(10)
 print(f"The name of the dog 1 object using set() is {dog_1.get_name()}.")
+print(f"The age of the dog object using set and get method is {dog_1.get_age()}.")
 
