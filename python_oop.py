@@ -7,6 +7,8 @@ x = 1
 # print(type(x))
 # print(type("hello"))
 
+# eg 1
+
 class Dog:
     # constructor for Dog class
     def __init__(self):
@@ -22,3 +24,22 @@ d1 = Dog()
 # print(d1.bark())
 # print(d1.legs())
 # print(type(d1))
+
+# eg 2
+
+class Dog1:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+dog1 = Dog1("Tim", 6)
+print(f"It's name is {dog1.name}.")
+
+dog2 = Dog1("John", 24)
+print(dog2.name)
+print(f"The age of {dog2.name} is {dog2.age}.")
+
+# second way of assigning a value to an objct is as follows
+dog1.name = "Sakira"
+print(f"The updated name of the dog 1 object is {dog1.name}.")
+
