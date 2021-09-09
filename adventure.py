@@ -33,10 +33,8 @@ if user_input.lower() == 'y':
                 print("Learning CS and programming is a fun thing. Code choose your own adventure game. ")
             else:
                 print("It is not late to learn CS. Goodby!!!")
-
         else:
             print("Dummy Dum, can you think of a first person singular> ")
-
 else:
     print("Good for you, we have a fun tour here. Just explore it and enjoy as much as you can.")
     ans_question = input("Enter a place: ")
