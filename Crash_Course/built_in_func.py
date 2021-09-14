@@ -55,8 +55,86 @@ multiply_ans = 4 * 2
 exponent_ans = 2**3
 modulo_ans = 18 % 10
 
-print(f"\tAfter Plus operation: {plus_ans}\n\tAfter minus operation is {minus_ans}\n\tAfter One Slash operation is \
-{divide_ans_one_slash}\n\tAfter Two Slash operation is {divide_ans_two_slash}")
+# use \ to break a line into multiple lines
+#print(f"\tAfter Plus operation: {plus_ans}\n\tAfter minus operation is {minus_ans}\n\tAfter One Slash operation is \
+#{divide_ans_one_slash}\n\tAfter Two Slash operation is {divide_ans_two_slash}")
+
+""" Lists """
+#1 append() to add an element to the end of the list
+#2 insert(index_where_you_want_to_put_item, item_name)
+list1 = ["Nabin", "pabi", "prinshu"]   # This lets you insert anywhere in the list and shifts other elements accordingly
+list1.insert(1, "Nabisha")
+# print(list1)
+
+#3 use the del statement to list an item from a list you know the index of an item
+del list1[0] # removes the first item.
+
+#4 pop() or pop(index_of_item)
+list1.pop() # removes the last item from the list, but we can store this value in a variable and use it againf. This
+# is not possible with the del statement-once you use del, you remove it permanently.
+
+#5 remove() method - use it if do not know an index of an item you want to remove
+#list1.remove('Item_you_want_to_remove')
+
+# To print a string as it is or in the raw form, use print(r'content may conatin \n or \t like pythonic things')
+#print(r'\n Nabin Niroula \t')  # displays \n Nabin Niroula \t
+
+invitees = ["nabin", "pabitra", "Prinsu"]
+# for person in invitees:
+#     print(f"Hello {person}, You are invited to the party")
+
+#print(f"{invitees[0]} cannot make to the party")
+
+# To add new person in that place you can do the following
+invitees[0] = "Jemie" # or 
+invitees.insert(0, "Jemie") # or
+
+# To remove that person
+invitees.remove('pabitra')
+#print(invitees.remove('pabitra')) # you do not get anything back because remove removes it completely and no return value.
+
+# To sort, and reverse the list
+list2 = ["CU", "Metro", "ACC"]
+# print(list2)
+# reversed_order = list2.reverse()
+# print(reversed_order) , # you have to reverse the list and then print it.
+list2.reverse()
+# print(list2)
+
+# use sort() method to sort in alphabetical order, but also that list is reverse
+list2.sort(reverse=True)
+#print(list2)
+
+""" List comprehension """
+# numbers = [1, 2, 3, 4, 5, 6]
+for num in range(1, 10): # 1o is excluded
+    print(num)
+
+# for the same for loop above, put the result in list
+list_num = []
+for num in range(1, 10): # 1o is excluded
+    list_num.append(num)
+    # print(num)
+#print(list_num)
+
+# now use list comprehension
+list_comprehension = [num**2 for num in range(1, 9)]
+print(f"After list comprehension: {list_comprehension}")
+
+million = [num for num in range(1, 1000000)]
+# print(million)
+max_val = max(million)
+print(f"Maximum value in a list is {max_val}")
+
+min_val = min(million)
+print(f"Minimum value in a list is {min_val}")
+
+sum_list = sum(million)
+print(f"The sum of the vlaues in the list is {sum_list}")
+
+
+
+
 
 
 
