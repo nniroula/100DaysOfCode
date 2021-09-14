@@ -43,8 +43,21 @@ name = "Pabha Niroula" # in titlecase, lowercase, and uppercase
 name1 = "\n\tPabira Niroula\n Nabisha Niroula \tPrinsu Niroula"
 # name2 = "Prinsu Niroula"
 # Now remove all the white spaces
-print(f"Before white spaces are removed: {name1}")
-print(f"After white spaces are removed: {name1.strip()}") # only removes white spaces from the beggin and the end, not from the middle
+# print(f"Before white spaces are removed: {name1}")
+# print(f"After white spaces are removed: {name1.strip()}") # only removes white spaces from the beggin and the end, not from the middle
+
+# print number 8 using +, -, *, /, //, %, **
+plus_ans = 6 + 2
+minus_ans = 10 - 2
+divide_ans_one_slash = 16/2
+divide_ans_two_slash = 16//2
+multiply_ans = 4 * 2
+exponent_ans = 2**3
+modulo_ans = 18 % 10
+
+print(f"\tAfter Plus operation: {plus_ans}\n\tAfter minus operation is {minus_ans}\n\tAfter One Slash operation is \
+{divide_ans_one_slash}\n\tAfter Two Slash operation is {divide_ans_two_slash}")
+
 
 
 
