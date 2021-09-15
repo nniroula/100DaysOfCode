@@ -107,8 +107,8 @@ list2.sort(reverse=True)
 
 """ List comprehension """
 # numbers = [1, 2, 3, 4, 5, 6]
-for num in range(1, 10): # 1o is excluded
-    print(num)
+# for num in range(1, 10): # 1o is excluded
+#     print(num)
 
 # for the same for loop above, put the result in list
 list_num = []
@@ -119,21 +119,38 @@ for num in range(1, 10): # 1o is excluded
 
 # now use list comprehension
 list_comprehension = [num**2 for num in range(1, 9)]
-print(f"After list comprehension: {list_comprehension}")
+# print(f"After list comprehension: {list_comprehension}")
 
 million = [num for num in range(1, 1000000)]
 # print(million)
 max_val = max(million)
-print(f"Maximum value in a list is {max_val}")
+# print(f"Maximum value in a list is {max_val}")
 
 min_val = min(million)
-print(f"Minimum value in a list is {min_val}")
+# print(f"Minimum value in a list is {min_val}")
 
 sum_list = sum(million)
-print(f"The sum of the vlaues in the list is {sum_list}")
+# print(f"The sum of the vlaues in the list is {sum_list}")
 
+# list comprehension for the odd numbers
+odd_list = [odd for odd in range(1, 20, 2)]
+# print(odd_list)
 
+even_list = [num for num in range(1, 20) if num % 2 == 0]
+# print(f"Even list is:\n\t {even_list}")
 
+# list slicing and copying
+languages = ["HTML", "CSS", "JS", "Python"]
+copy_of_lang = languages[:]
+#print(languages)
+
+lang1 = ["Js", "Python", "Java", "C++"]
+lang2 = lang1 # this means lang2 points to the lang1. Any changes made to one of them will have affect on others. This is different than coping with [:]
+# print(f"lang1 is {lang1}")
+# print(f"lang2 is {lang2}")
+lang2.append("Scala")
+print(f"lang2 after appending an element is {lang2}")
+print(f"lang1 should also be same as the lang2, {lang1}")
 
 
 
