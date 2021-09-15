@@ -185,7 +185,7 @@ schools = [] # empty list
 if schools:  # this evaluates to False b/c if schools: means if there is at least one item in that list, False otherwise
     # print("It's a nice school.")      # in list: case, Python evaluates to True or False
     "Nice"
-
+"""
 five_users = ["admin", "charles", "john", "alex", "hether hut"]
 
 if five_users: # this means if the list is not empty
@@ -196,7 +196,9 @@ if five_users: # this means if the list is not empty
             print(f"Hello {user.title()}, You are awesome.")
 else:
     print("We need to get some users.")
+"""
 
+"""
 current_users = ["bob", "daniel", "mark", "kevin", "katie"]
 new_users = ["Katie", "Mark", "Novice", "Code newbie"]
 
@@ -209,6 +211,22 @@ if current_users and new_users: # to make sure that lists are not empty
             print("User name is accepted!")
 else:
     print("It looks like a list or both might be empty.")
+
+"""
+# Ordinal numbers - 1st, 2nd, 3rd and so forth
+for num in range(1, 7):
+    if num == 1:
+        print("1st")
+    elif num == 2:
+        print("2nd")
+    elif num == 3:
+        print("3rd")
+    elif num == 4:
+        print("4th")
+    elif num == 5:
+        print("5th")
+    else:
+        print("6th")
 
 
 
