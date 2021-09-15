@@ -149,8 +149,68 @@ lang2 = lang1 # this means lang2 points to the lang1. Any changes made to one of
 # print(f"lang1 is {lang1}")
 # print(f"lang2 is {lang2}")
 lang2.append("Scala")
-print(f"lang2 after appending an element is {lang2}")
-print(f"lang1 should also be same as the lang2, {lang1}")
+# print(f"lang2 after appending an element is {lang2}")
+# print(f"lang1 should also be same as the lang2, {lang1}")
+
+# tuple = immutable list
+foods= ("Rice", "Taco", "nuggets", "sandwich", "burrito")
+# print(f"The food tuple is {foods}")
+first_item = foods[0]
+# print(first_item)
+
+# for food in foods:
+#     print(food)
+
+#list enhancement
+list_enh = [food for food in foods]
+# print(list_enh)
+
+# try to change the first item in a tuple and see what happens
+#foods[0] = "banana"  # TypeError: 'tuple' object does not support item assignment
+
+# "in" operator to check membership in a list
+ages = [12, 24, 45, 36]
+# if 24 in ages:
+#     print(True)
+
+# print(36 in ages)
+# print(10 in ages) # should return False
+
+# 'not in' operator
+not_in = 13 not in ages # should return True
+# print(not_in) 
+
+""" an empty list evaluates to False """
+schools = [] # empty list
+if schools:  # this evaluates to False b/c if schools: means if there is at least one item in that list, False otherwise
+    # print("It's a nice school.")      # in list: case, Python evaluates to True or False
+    "Nice"
+
+five_users = ["admin", "charles", "john", "alex", "hether hut"]
+
+if five_users: # this means if the list is not empty
+    for user in five_users:
+        if user.lower() == "admin":
+            print(f"Hello {user.title()}, You are at a great position.")
+        if user.lower() != "admin":
+            print(f"Hello {user.title()}, You are awesome.")
+else:
+    print("We need to get some users.")
+
+current_users = ["bob", "daniel", "mark", "kevin", "katie"]
+new_users = ["Katie", "Mark", "Novice", "Code newbie"]
+
+# check if the user name has already been use-make case insensitive to check
+if current_users and new_users: # to make sure that lists are not empty
+    for new_user in new_users:
+        if ((new_user.lower() in current_users) or (new_user.title() in current_users)):
+            print("User name is in use, create a different user name.")
+        else:
+            print("User name is accepted!")
+else:
+    print("It looks like a list or both might be empty.")
+
+
 
 
 
