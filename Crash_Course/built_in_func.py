@@ -265,7 +265,7 @@ for key, value in cs_concepts.items(): # items() function
     print("\nkey: " + key)
     print("Value: " + value)
 
-"""
+
 
 # keys() and values() functions of dictionary with items()
 dict2 = {"name": "Nabin", "college":"CU Denver", "program": "Graduate Studies"}
@@ -291,4 +291,18 @@ print(f"The values are {dict_values}")
 dict_list = list(dict_values)
 print(f"Dictionary values in the form of the list: {dict_list}")
 
+"""
 
+# Nested lists and dictionaries
+# make a list and nest a dictionary inside it and also a list, and access elements in them
+nested_list = [["programming", "CS", 4], {"Nabin": "Niroula", "years_of_exp": 0, "Done_programming": "No"}, 4]
+for element in nested_list:
+# for i in range(len(nested_list)):
+    if nested_list[0] == element:
+        for val in element:
+            print(val)
+    # if nested_list[0] == item:
+    #     print(item[0])
+    if nested_list[1] == element:
+        for key, val in element.items():
+            print("key = " + key + ", " + "Value = " + str(val))
