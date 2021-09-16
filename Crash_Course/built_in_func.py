@@ -333,7 +333,6 @@ print(f"This should return PYTHON: {get_python}")
 get_coding = favorite_lang["job"][0] # [0] indicates that whatever is in favorite_lang["job"] is a list.
 print(get_coding)
 
-"""
 
 # dictionary of cities
 cities = {"city 1": {"name": "Denver", "state": "Colorado", "population": "6 million"} , \
@@ -350,4 +349,17 @@ for key, val in cities.items(): #    cities.keys() - key is city1, city2 and cit
     # for city, value in key:  # to get "Denver" - cities["city 1"]["name"]
     #     print(city)
     #     print("\t" + value)
+
+"""
+
+# nested lists
+list_nest = [["programming language", "programming paradigm", "programming fun"], \
+["Python", "JS", "C++" ], ["HTML", "CSS", "Flask"]]
+#print(list_nest)
+#print all the values in each list item in nested list
+# item_in_inner_list = [item[i] for  item in list_nest if i < len(list_nest)]
+for item in list_nest:
+    for val in item:
+        print(val)
+
 
