@@ -214,6 +214,7 @@ else:
 
 """
 # Ordinal numbers - 1st, 2nd, 3rd and so forth
+"""
 for num in range(1, 7):
     if num == 1:
         print("1st")
@@ -227,7 +228,22 @@ for num in range(1, 7):
         print("5th")
     else:
         print("6th")
+"""
 
+""" Dictionaries in Python """
+dict1 = {}
+dict1["first_name"] = "Nabisha"
+dict1["last_name"] = "Niroula"
+dict1["age"] = "3 months"
+dict1["city"] = "Aurora, CO"
+
+print(dict1)
+for key_item in dict1: # this prints only keys
+    print(key_item)
+print("This should print all values not keys.")
+for key_item in dict1:
+    # print("This should print all values not keys.")
+    print(dict1[key_item])
 
 
 
