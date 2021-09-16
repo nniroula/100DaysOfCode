@@ -1,3 +1,6 @@
+from typing import KeysView
+
+
 name = "Nabin Niroula"
 my_name = name.title() # title() converts the first letter of the each word to upper case.
 # print(f"This is due to title() function: {my_name}.")
@@ -306,7 +309,7 @@ for element in nested_list:
         for key, val in element.items():
             print("key = " + key + ", " + "Value = " + str(val))
 
-"""
+
 # Nested dictionary
 favorite_lang = {"None":"None", "lang": {"Hone": "Python", "fone": "JS", "structure": "HTML", "style": "CSS"}, "tech": {"stack": "MERN", "level": "Junior"}, "job":["Coding", "Coder", "Programmer"]}
 # print(favorite_lang)
@@ -329,4 +332,22 @@ print(f"This should return PYTHON: {get_python}")
 # get coding
 get_coding = favorite_lang["job"][0] # [0] indicates that whatever is in favorite_lang["job"] is a list.
 print(get_coding)
+
+"""
+
+# dictionary of cities
+cities = {"city 1": {"name": "Denver", "state": "Colorado", "population": "6 million"} , \
+"city 2": {"name": "New York City", "state": "New York", "population": "Just too much"}, \
+ "city 3": {"name": "Chicago", "state": "Illinois", "population": "dense"}}
+
+#print(cities)
+
+# print all cities and information related to each of them.
+#for i in range(len(cities)): # works in list, dictionaries are not indexed items
+for key, val in cities.items(): #    cities.keys() - key is city1, city2 and city3
+    # print(key)
+    print(f"City's name is {val['name']} and state is {val['state']}, and population is {val['population']}.")
+    # for city, value in key:  # to get "Denver" - cities["city 1"]["name"]
+    #     print(city)
+    #     print("\t" + value)
 
