@@ -247,7 +247,7 @@ for key_item in dict1:
     # print("This should print all values not keys.")
     print(dict1[key_item])
 
-"""
+
 
 cs_concepts = {}
 cs_concepts["class"] = "blueprint for objects"
@@ -257,8 +257,38 @@ cs_concepts["while"] = "Example of a loop"
 print(cs_concepts)
 
 # print keys and then their meanings together
+# one way
 for key_item in cs_concepts:
     print(f"{key_item}: \n\t{cs_concepts[key_item]}")
+# second way
+for key, value in cs_concepts.items(): # items() function
+    print("\nkey: " + key)
+    print("Value: " + value)
 
+"""
+
+# keys() and values() functions of dictionary with items()
+dict2 = {"name": "Nabin", "college":"CU Denver", "program": "Graduate Studies"}
+for key, value in dict2.items():   # items() function is needed here to unpack key-value pairs
+    print(key + ":" + value)
+
+# keys() function
+print("\nthis should print out all the keys in the dictionary:-\n")
+dict_keys = dict2.keys() # this returns tuple like structure, use list() to convert it to a list
+print(dict_keys)
+print(type(dict_keys))
+inlist = list(dict_keys)
+print(inlist)
+print(f"fist item is {inlist[0]}")                      # works fine
+# sorted_list = inlist.sort()
+# print(sorted_list)
+inlist.sort()
+print(f"Sorted list is {inlist}")
+
+#   values() function
+dict_values = dict2.values()        # this gives tuple like construct, use list() to convert it to the list
+print(f"The values are {dict_values}")  
+dict_list = list(dict_values)
+print(f"Dictionary values in the form of the list: {dict_list}")
 
 
