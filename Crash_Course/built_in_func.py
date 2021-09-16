@@ -228,9 +228,11 @@ for num in range(1, 7):
         print("5th")
     else:
         print("6th")
-"""
 
+""" 
 """ Dictionaries in Python """
+
+""" 
 dict1 = {}
 dict1["first_name"] = "Nabisha"
 dict1["last_name"] = "Niroula"
@@ -245,9 +247,18 @@ for key_item in dict1:
     # print("This should print all values not keys.")
     print(dict1[key_item])
 
+"""
 
+cs_concepts = {}
+cs_concepts["class"] = "blueprint for objects"
+cs_concepts["Objects"] = "Instances of a class"
+cs_concepts["Inheritance"] = "To extend from one construct to another construct"
+cs_concepts["while"] = "Example of a loop"
+print(cs_concepts)
 
-
+# print keys and then their meanings together
+for key_item in cs_concepts:
+    print(f"{key_item}: \n\t{cs_concepts[key_item]}")
 
 
 
