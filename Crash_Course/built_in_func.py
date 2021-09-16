@@ -291,7 +291,6 @@ print(f"The values are {dict_values}")
 dict_list = list(dict_values)
 print(f"Dictionary values in the form of the list: {dict_list}")
 
-"""
 
 # Nested lists and dictionaries
 # make a list and nest a dictionary inside it and also a list, and access elements in them
@@ -306,3 +305,28 @@ for element in nested_list:
     if nested_list[1] == element:
         for key, val in element.items():
             print("key = " + key + ", " + "Value = " + str(val))
+
+"""
+# Nested dictionary
+favorite_lang = {"None":"None", "lang": {"Hone": "Python", "fone": "JS", "structure": "HTML", "style": "CSS"}, "tech": {"stack": "MERN", "level": "Junior"}, "job":["Coding", "Coder", "Programmer"]}
+# print(favorite_lang)
+
+for key, val in favorite_lang.items():
+    print(val)
+    print(key)
+
+# To accesses values inside nested dictionary
+print(f"the length of the dictionary is {len(favorite_lang)}")
+for i in range(len(favorite_lang)):
+    for key in favorite_lang.keys():
+        print(key)
+    for val in favorite_lang.values():
+        print(val)
+# get python
+get_python = favorite_lang["lang"]["Hone"]
+print(f"This should return PYTHON: {get_python}")
+
+# get coding
+get_coding = favorite_lang["job"][0] # [0] indicates that whatever is in favorite_lang["job"] is a list.
+print(get_coding)
+
