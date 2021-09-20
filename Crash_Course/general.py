@@ -12,7 +12,7 @@ elif usser_input % 2 == 1:
 # else:
 #     print("Invalid input, please try next time.")
 
-"""
+
 # While loop
 
 DONE = True
@@ -37,4 +37,14 @@ while DONE:
         continue
 print(even_list)
      
+"""
+unconfirmed_user = ["John", "Jackie", "katie"]
+confirmed_user = []
+for user in unconfirmed_user:
+    if user not in confirmed_user and len(user) > 0:
+        confirmed_user.append(user)
+        print(f"Confirming  a user {user.title()}")
+print("The following users are confirmed:")
+for name in confirmed_user:
+    print(f"\t{name.title()}")
 
