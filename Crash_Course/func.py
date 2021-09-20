@@ -75,9 +75,15 @@ get_list = pass_list(["John", "dixie", "Henry", "Uhul"])
 
 # passing an Arbitrary number of arguments 
 
-def names(*our_names):
+def names(*our_names):   # *, asterik indicates arbitrary number of arguments
     name = [name for name in our_names]
     return name
 
 new_names = names("Nk", "Nabin", "Nila")
-print(new_names)
+# print(new_names)
+one_name = names("Prinshu")
+# print(one_name)
+
+# importing modules from different files (Or importing one file in another file)
+# first file is name.py and second file is work.py
+
