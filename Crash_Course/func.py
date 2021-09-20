@@ -30,10 +30,31 @@ def default_values(name, work = "Software Engineering"): # this is called a defa
     """ uses default parameter values. """
     return name + ", " + work
 # ways to call this function. 
-#1 withour overriding any values
+#1 withour overriding default values
 no_overriding = default_values("Nabin")
-print(f"Output before overriding the default parameter is {no_overriding}")
+# print(f"Output before overriding the default parameter is {no_overriding}")
 
+# with overriding default values
 with_overriding = default_values(name = "NK", work = "Student")
-print(f"Output after overring the default parameter is {with_overriding}")
+# print(f"Output after overring the default parameter is {with_overriding}")
+
+# making an argument opitonal in function defination
+
+#def optional_arg(fname, mideel_name = " ", lname): # any parameter that comes after optional paramter is not accessible
+def optional_arg(fname, lname, middle_name = " "):
+    if middle_name:
+        name = fname + " " + middle_name + " " + lname
+    else:
+        name = fname + " " + lname
+    return name
+
+func_call1 = optional_arg("nabin", "Niroula")
+# print(func_call1)
+
+func_call2 = optional_arg("Nabin", "Niroula", "Keerun")
+# print(func_call2)
+
+func_call3  = optional_arg(fname = "Nk", middle_name = "Bhaie", lname = "Niroula")
+# print(func_call3)
+
 
