@@ -72,3 +72,12 @@ def pass_list(names):
     return input_names
 get_list = pass_list(["John", "dixie", "Henry", "Uhul"])
 # print(get_list)
+
+# passing an Arbitrary number of arguments 
+
+def names(*our_names):
+    name = [name for name in our_names]
+    return name
+
+new_names = names("Nk", "Nabin", "Nila")
+print(new_names)
