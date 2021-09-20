@@ -37,7 +37,7 @@ while DONE:
         continue
 print(even_list)
      
-"""
+
 unconfirmed_user = ["John", "Jackie", "katie"]
 confirmed_user = []
 for user in unconfirmed_user:
@@ -47,4 +47,27 @@ for user in unconfirmed_user:
 print("The following users are confirmed:")
 for name in confirmed_user:
     print(f"\t{name.title()}")
+
+"""
+
+# Dictionaries
+# get user input and use to test the poll result
+cric_poll = {}
+# name = input("Enter your name please: ")
+# team = input("What is favorite IPL cricket team? ")
+
+DONE = True
+while DONE:
+    name = input("Enter your name please: ")
+    team = input("What is favorite IPL cricket team? ")
+    cric_poll[name] = team
+    repeat = input("Would you like to continue the poll? (yes/no) ")
+    if repeat.lower() == "yes":
+        continue
+    else:
+        DONE = False
+print(cric_poll)
+
+
+
 
