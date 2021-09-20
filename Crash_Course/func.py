@@ -66,4 +66,9 @@ def return_dict(name, job):
 dict_obj = return_dict("Nbain", "Niroula")
 # print(dict_obj)
 
-
+def pass_list(names):
+    """ This passes a lsit as an argument, names works as a list. """
+    input_names = [name for name in names]
+    return input_names
+get_list = pass_list(["John", "dixie", "Henry", "Uhul"])
+# print(get_list)
