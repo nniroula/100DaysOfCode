@@ -350,7 +350,6 @@ for key, val in cities.items(): #    cities.keys() - key is city1, city2 and cit
     #     print(city)
     #     print("\t" + value)
 
-"""
 
 # nested lists
 list_nest = [["programming language", "programming paradigm", "programming fun"], \
@@ -362,4 +361,6 @@ for item in list_nest:
     for val in item:
         print(val)
 
+"""
 
+# User input and while loop- chapter 7
