@@ -57,4 +57,13 @@ func_call2 = optional_arg("Nabin", "Niroula", "Keerun")
 func_call3  = optional_arg(fname = "Nk", middle_name = "Bhaie", lname = "Niroula")
 # print(func_call3)
 
+# return dictionary in function call
+def return_dict(name, job):
+    """ return dictionary in func call. """
+    dict1 = {}
+    dict1[name] = job
+    return dict1
+dict_obj = return_dict("Nbain", "Niroula")
+# print(dict_obj)
+
 
