@@ -64,8 +64,10 @@ while DONE:
     repeat = input("Would you like to continue the poll? (yes/no) ")
     if repeat.lower() == "yes":
         continue
-    else:
+    elif repeat.lower() == "no":
         DONE = False
+    else:
+        break
 print(cric_poll)
 
 
