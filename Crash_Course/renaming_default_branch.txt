@@ -1,0 +1,2 @@
+To remane a git default branch- which is master to a branch
+named main.
