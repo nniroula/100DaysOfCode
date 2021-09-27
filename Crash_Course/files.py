@@ -27,7 +27,7 @@ with open(file_to_read) as file_to_be_read:  # reads file and stores file object
     for line in file_to_be_read:
         print(line.rstrip()) # end of the line adds blank line at the end, and also print() adds another blank line.
                             # rstrip() removes those 2 blank lines
-"""
+
 # readlines() stores output in the form of the list.
 read_file = "names.txt"
 print("Using readlines() method. ")
@@ -38,5 +38,29 @@ with open(read_file) as file_read:
 for line in output:
     line = line.rstrip()
     print(line)
+
+"""
+# Writing single line to a file. 'w' removes the content of the file if the file already exists, and writes new
+#content to it, so, be careful while using write to a file
+
+# createa file named programming.txt
+file_to_write = "programming.txt"
+# with open(file_to_write) as write_content_to_this_file:
+with open(file_to_write, 'w') as write_content_to_this_file:   # with 'w', there is no terminal output, you can open the file in finder
+    write_content_to_this_file.write("I love programming.")
+# Since writing to a file has no terminal output, we would have to read the file's constent and display it
+with open('programming.txt') as read_this_file:
+    print("After writing to a file: ")
+    content = read_this_file.read()  # or read_this_file.readlines()
+    print(f"\t{content}")
+
+# append some content to this file
+with open(file_to_write, 'a') as appending_something:
+    appending_something.write(" Class is a blueprint of objects in OOP concept.")
+
+with open('programming.txt') as read_after_append:
+    print("After appending to a file: ")
+    content = read_after_append.read()  # or read_this_file.readlines()
+    print(f"\t{content}")
 
 
