@@ -18,7 +18,7 @@ with open("names.txt") as file_line_read:
     file_lines = file_line_read.read()
     for line in "names.txt":   # this does not work because Python considers names.txt as a stirng than a file
         print(line)
-"""
+
 # store a file in a variable and access it in the for loop
 file_to_read = "names.txt"
 print(f"File before for loop is {file_to_read}")
@@ -27,4 +27,16 @@ with open(file_to_read) as file_to_be_read:  # reads file and stores file object
     for line in file_to_be_read:
         print(line.rstrip()) # end of the line adds blank line at the end, and also print() adds another blank line.
                             # rstrip() removes those 2 blank lines
+"""
+# readlines() stores output in the form of the list.
+read_file = "names.txt"
+print("Using readlines() method. ")
+with open(read_file) as file_read:
+    output = file_read.readlines()  # this holds a list that includes a new line character too for line ending character.
+    # print(output)
+    # we can use output, which is a list, outside of the with indentation too
+for line in output:
+    line = line.rstrip()
+    print(line)
+
 
