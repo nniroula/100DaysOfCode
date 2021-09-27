@@ -39,7 +39,7 @@ for line in output:
     line = line.rstrip()
     print(line)
 
-"""
+
 # Writing single line to a file. 'w' removes the content of the file if the file already exists, and writes new
 #content to it, so, be careful while using write to a file
 
@@ -69,5 +69,18 @@ with open('programming.txt', 'r') as read_after_append:
     print("After using readlines() function: ")
     for line in content_readlines:
         print(f"\t{line.rstrip()}")
+"""
+
+# Q 1 Write a program that prompts the user for the name. When they respond, write their name to a file called guest.txt
+user_name = input("Please enter your name: ")
+with open("guest.txt", "w") as guest_name:
+    guest_name.write(user_name)
+
+# check if the name is wirttent to a file called guest.txt
+with open("guest.txt") as file_object:
+    print("The file contains the following name(s): ")
+    name_in_file = file_object.read()
+    print(f"\t{name_in_file}")
+
 
 
