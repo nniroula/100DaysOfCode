@@ -56,11 +56,18 @@ with open('programming.txt') as read_this_file:
 
 # append some content to this file
 with open(file_to_write, 'a') as appending_something:
-    appending_something.write(" Class is a blueprint of objects in OOP concept.")
+    appending_something.write(" Class is a blueprint of objects in OOP concept.\n")
+    appending_something.write("Objects are instances of a Class in OOP too.")
 
-with open('programming.txt') as read_after_append:
-    print("After appending to a file: ")
-    content = read_after_append.read()  # or read_this_file.readlines()
-    print(f"\t{content}")
+with open('programming.txt', 'r') as read_after_append:
+    # print("After appending to a file: ")
+    # content = read_after_append.read()  # or read_this_file.readlines()
+    # print(f"\t{content}")
+
+# you cannot call read() and readlines() within the same "with" key word scope. the seond one will not give an output
+    content_readlines = read_after_append.readlines()
+    print("After using readlines() function: ")
+    for line in content_readlines:
+        print(f"\t{line.rstrip()}")
 
 

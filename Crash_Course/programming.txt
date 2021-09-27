@@ -1,1 +1,2 @@
 I love programming. Class is a blueprint of objects in OOP concept.
+Objects are instances of a Class in OOP too.
