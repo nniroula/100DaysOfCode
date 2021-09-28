@@ -23,10 +23,10 @@ except FileNotFoundError:
 else:
     print(f"the length of a file is {get_length}")
 
-"""
+
 # put this in a function
 def count_file_words(filename):
-    """Count the number of words in a file. """
+    #Count the number of words in a file.
     # open the file, read it and return the word count
     try:
         with open(filename) as file_object:
@@ -47,3 +47,6 @@ files = ["names.txt", "ok.txt", "programming.txt"]
 for file in files:
     func_apply = count_file_words(file)
     print(func_apply)
+
+"""
+

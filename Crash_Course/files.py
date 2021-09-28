@@ -82,5 +82,20 @@ with open("guest.txt") as file_object:
     name_in_file = file_object.read()
     print(f"\t{name_in_file}")
 
+# Storing data(such as list) to a file, use json.dump() and json.load()
+
+import json
+list1 = [2, 4, 6, 8]  # Store this in a file
+
+file_to_store_data = "list1.txt"
+with open(file_to_store_data, "w") as file_object:
+    json.dump(list1, file_object)
+# print(file_object) prints json object like thing. This means json.dump() has no explicit output. Now read that file 
+# to check if list1 is writtent to that file
+with open(file_to_store_data) as file_obj:
+    numbers = json.load(file_obj)
+print(numbers)
+
+
 
 
