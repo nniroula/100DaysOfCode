@@ -38,4 +38,19 @@ class TestAnnonymousSurvey(unittest.TestCase):
         annoymous_survey.store_response('Python')  # our response is Python
         # now check if store_response() function has put Python in a list
         self.assertIn("Python", annoymous_survey.responses)
-unittest.main()
+
+    #Now test if three responses are stored in a list
+    def test_store_three_responses(self):
+        qustion2 = "Give 3 programming languages: "
+        # isntantiate a class
+        obj = AnnonymousSurvey(qustion2)
+        # now use a function to store multiple responses
+        res = ["Python", "JS", "C++"]
+        # store the responses in a list
+        for item in res:
+            obj.store_response(item) 
+        # test that these reponses are stored properly
+        for respond in obj.responses:
+            self.assertIn(respond, obj.responses)
+
+unittest.main()  # without this statement the test runs, but you may not be able to see the output in terminal.  
