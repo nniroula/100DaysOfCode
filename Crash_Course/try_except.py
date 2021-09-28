@@ -8,7 +8,7 @@ try:
 except:
     print("You cannot divide by zero.")
 
-"""
+
 
 # counting words in text file
 try:
@@ -22,3 +22,21 @@ except FileNotFoundError:
     print(f"the file {file} does not exist. ")
 else:
     print(f"the length of a file is {get_length}")
+
+"""
+# put this in a function
+def count_file_words(filename):
+    # open the file, read it and return the word count
+    try:
+        with open(filename) as file_object:
+            words_list = file_object.read()
+            words_list = words_list.split()
+            # print(len(words_list))
+    except FileNotFoundError:
+        return f"The file {filename} does not exist."
+    else:
+         return len(words_list)
+
+# call a function
+word_count = count_file_words("names.txt")
+print(f"The words count in that file is {word_count}")
