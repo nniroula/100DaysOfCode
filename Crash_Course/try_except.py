@@ -26,6 +26,7 @@ else:
 """
 # put this in a function
 def count_file_words(filename):
+    """Count the number of words in a file. """
     # open the file, read it and return the word count
     try:
         with open(filename) as file_object:
@@ -35,8 +36,14 @@ def count_file_words(filename):
     except FileNotFoundError:
         return f"The file {filename} does not exist."
     else:
-         return len(words_list)
+         return f"The total words count in the file {filename} is {len(words_list)}."
 
 # call a function
 word_count = count_file_words("names.txt")
-print(f"The words count in that file is {word_count}")
+# print(f"The words count in the file {} is {word_count}")
+
+# run this function to count words in different files
+files = ["names.txt", "ok.txt", "programming.txt"]
+for file in files:
+    func_apply = count_file_words(file)
+    print(func_apply)
