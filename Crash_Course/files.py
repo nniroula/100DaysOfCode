@@ -69,7 +69,7 @@ with open('programming.txt', 'r') as read_after_append:
     print("After using readlines() function: ")
     for line in content_readlines:
         print(f"\t{line.rstrip()}")
-"""
+
 
 # Q 1 Write a program that prompts the user for the name. When they respond, write their name to a file called guest.txt
 user_name = input("Please enter your name: ")
@@ -95,6 +95,47 @@ with open(file_to_store_data, "w") as file_object:
 with open(file_to_store_data) as file_obj:
     numbers = json.load(file_obj)
 print(numbers)
+
+
+# Store a user name in a file and display it when a user runs the program again
+
+user_name = input("Please enter your name: ")
+# store this username in a file called username.txt
+import json
+file_name = "username.txt"
+try:
+    with open(file_name, 'w') as file_object:
+        json.dump(user_name, file_object)   # dump means to store the file content
+        # this does not give any output, use json.load() to check if there is anything in a file username.txt
+except FileNotFoundError:
+    pass
+# now greet if username is already stored
+
+with open("username.txt") as file_obj:
+    username_here = json.load(file_obj)  # load means to read the file content
+print(f"Hello {username_here}, welcome back.")
+
+"""
+
+# Store a user name in a file and display it when a user runs the program again
+# load the file, if no file is found-error raises, then use except block to get user input
+
+import json
+file_nam = "user_name.json"
+
+try:
+    with open(file_nam) as file_object:
+        username = json.load(file_object)
+       
+except FileNotFoundError: 
+    user_input = input("Enter your user name: ")
+    with open(file_nam, 'w') as file_obj:
+        json.dump(user_input, file_obj)
+        print(f"Nice you are a first time coder, {user_input}")
+else:
+    print(f"Hello {username}, welcome back to coding world!")
+
+# refactor this code into couple of functions for cleaner code.
 
 
 
