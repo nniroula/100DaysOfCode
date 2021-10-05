@@ -10,7 +10,7 @@ class TestSelectionSort(unittest.TestCase):
         """ To test the selection method."""
         get_sorted = self.object1.selection_sort()
         self.assertEqual(get_sorted, [1, 2, 3, 4, 5, 6, 7])
-
+        
 unittest.main()
 
 
