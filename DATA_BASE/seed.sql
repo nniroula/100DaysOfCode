@@ -4,10 +4,10 @@ CREATE DATABASE movies_example;
 
 CREATE TABLE movies
 (
-    id SERIAL PRIMARY KEY
-    title NOT NULL
-    release_year INTEGER
-    runtime INTEGER
+    id SERIAL PRIMARY KEY,
+    title NOT NULL,
+    release_year INTEGER,
+    runtime INTEGER,
     rating TEXT
 );
 
