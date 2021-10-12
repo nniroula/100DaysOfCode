@@ -12,4 +12,11 @@ class TestUserInput(unittest.TestCase):
         first_name = obj1.get_user_fname()
         self.assertTrue(first_name.title())
 
+    def test_last_name(self):
+        """ This function tests the user's last name """
+        obj2 = UserInput()
+
+        last_name = obj2.get_user_lname()
+        self.assertTrue(last_name)
+
 unittest.main()
