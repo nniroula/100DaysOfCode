@@ -7,17 +7,47 @@
     <title>HTML form</title>
 </head>
 <body>
-    <h1>HTML Sign Up Form</h1>
+    <h1>HTML Form</h1>  
+    <!-- center align h1 with css style sheet -->
     <form>
-        <label for="nk">Name:</label>
-        <input type="text" id="nk" name="name">
+        <!-- <label for="nk">Name:</label>
+         instead of placeholder if used value attribute contains real values to be sent to the server. 
+        <input type="text" id="nk" name="name" value="nk bhaie">
         <label for="email-address">Email</label>
-        <input type="email" id="email-address" name="email">
+        <input required type="email" id="email-address" name="email" placeholder="abcd@gmail.com">
 
         <label for="pass">Password:</label>
         <input id="pass" type="password" name="">
 
-        <button>Sign Up</button>
+        <button type="submit">Sign Up</button> -->
+
+        <!-- Commonly used html form atrributes -->
+        <!-- for attribute in label and id attribute in input element connects lable and input elements -->
+        <label for="nam">Name:</label>
+        <!-- When you click on labeling word, it should highnlight the input box so that you know it is connected -->
+        <input id="nam" type="text" name="send-to-server">
+        <br>
+
+        <label for="emailing">Email:</label>
+        <input type="email" id="emailing" name="senttoserver" placeholder="something@gmail.com">
+        <br>
+        <label for="pass">Password:</label>
+        <input id="pass" type="password" placeholder="password" name="passServer">
+        <br>
+        <label for="checking">Checkbox1:</label>
+        <input type="checkbox" id="checking" >
+        <br>
+        <label for="checking">Checkbox2:</label>
+        <input type="checkbox" value="is checked" id="checking" >
+        <br>
+        <label for="checking">Checkbox3:</label>
+        <input type="checkbox" value="is checked" id="checking" checked >
+        <br>
+
+
+        <br>
+        <button type="submit">Submit</button>
+
        
     </form>
     
