@@ -43,7 +43,28 @@
         <label for="checking">Checkbox3:</label>
         <input type="checkbox" value="is checked" id="checking" checked >
         <br>
-
+        <label for="required-attribute">Personal Email:</label>
+        <input type="email" name="requiredEmail" id="required-attribute" required>
+        <br>
+        <!-- replace placeholder with value attribute and that value associated with value attribute will be sent to the server unless you change it manually-->
+        <label for="phon">Phone1:</label>
+        <input type="tel" id="phon" name="fone">
+        <br>
+        <label for="foon">Phone2:</label>
+        <input type="tel" id="foon" name="fon"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="720-499-3220">
+        <br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="dat">
+        <br>
+        <label for="timeshow">Time:</label> 
+        <input id="timeshow" type="datetime-local" name="tiam">
+        <br>
+        <label for="search">Search Bar:</label>
+        <input id="search" type="search">
+        <br>
+        <label>Select Color:</label>
+        
 
         <br>
         <button type="submit">Submit</button>
