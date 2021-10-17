@@ -89,10 +89,29 @@
         <input type="radio" id="radios" name="rad">
 
         <label for="radis" >Not Sure</label>
-        <input type="radio" name="rad" >
+        <input type="radio" id="radis" name="rad" >
         <br>
-        
+        <!-- <textarea> -->
+        <label for="biggertext">Text Area Attribute</label>
+        <textarea type="textarea" id="biggertext" name="biggertext">
+        </textarea>
         <br>
+        <!-- Dropdown list:- use select and option elements-->
+        <label>Dropdown list without selected attribute </label>
+        <select name="food" id="eatit">
+            <option>Tacos</option>
+            <option>Sushi</option>
+            <option >Spaghetti</option>
+        </select>
+        <br>
+        <label>Dropdown list with selected attribute </label>
+        <select name="food" id="eatit">
+            <option>Tacos</option>
+            <option>Sushi</option>
+            <option selected>Spaghetti</option>
+        </select>
+        <br>
+
         <button type="submit">Submit</button>
 
     </form>
