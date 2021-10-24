@@ -8,5 +8,10 @@ class TestAddTwoNumbers(unittest.TestCase):
         # call method on that class
         sum1 = inst.get_sum()
         self.assertTrue(sum1)  
-
+    
+    def test_two_values(self):
+        obj = AddTwoNumbers()
+        sum2 = obj.get_sum()
+        self.assertTrue(sum2)
+        
 unittest.main()
