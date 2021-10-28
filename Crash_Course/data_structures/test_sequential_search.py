@@ -12,6 +12,11 @@ class TestSequentialSearch(unittest.TestCase):
         result1 = inst1.sequential_search()
         self.assertEqual(True, result1)
 
+    def test_not_in_list(self):
+        list1 = [1, 2, 3, 4]
+        inst1 = SequentialSearch(list1, 5)
+        result1 = inst1.sequential_search()
+        self.assertEqual(False, result1)
 
 unittest.main()
         
