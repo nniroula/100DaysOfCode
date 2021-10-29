@@ -20,5 +20,11 @@ class TestSequentialSearch(unittest.TestCase):
         result1 = inst1.sequential_search()
         self.assertEqual(False, result1)
 
+    def test_empty_list(self):
+        self.list1 = []
+        inst2 = SequentialSearch(self.list1, 0)
+        result2 = inst2.sequential_search()
+        self.assertFalse(False, result2)
+
 unittest.main()
         
