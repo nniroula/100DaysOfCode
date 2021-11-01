@@ -5,6 +5,7 @@ class BinarySearch():
         """ constructor """
         self.list = list
         self.val = val
+        self.list.sort()
 
     def binary_search(self):
         """ applies binary search algorithm. """
@@ -25,8 +26,8 @@ class BinarySearch():
                 found = True
         return found
 
-a = [2, 4, 6, 8, 10]
-obj1 = BinarySearch(a, 8)
-output = obj1.binary_search()
-print(output)
+# a = [2, 4, 6, 8, 10]
+# obj1 = BinarySearch(a, 8)
+# output = obj1.binary_search()
+# print(output)
 
