@@ -12,4 +12,9 @@ class TestPrimeNumber(unittest.TestCase):
         result1 = obj1.prime_number()
         self.assertTrue(result1)
 
+    def test_not_prime(self):
+        obj2 = PrimeNumber(10)
+        result2 = obj2.prime_number()
+        self.assertEqual('It is not a prime number.', result2)
+
 unittest.main()
