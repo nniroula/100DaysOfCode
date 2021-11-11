@@ -19,8 +19,8 @@ class BubbleSort():
         return self.list1
 
 # instantiate the class
-# arr = [2, 8, 6, 4, 5, 3, 7, 22, 14, 18, 12, 20]
-arr = ['charles', 'john', 'sarah', 'alex', 'bill']
-obj1 = BubbleSort(arr)
-output1 = obj1.bubble_sort()
-print(output1)
+# # arr = [2, 8, 6, 4, 5, 3, 7, 22, 14, 18, 12, 20]
+# arr = ['charles', 'john', 'sarah', 'alex', 'bill']
+# obj1 = BubbleSort(arr)
+# output1 = obj1.bubble_sort()
+# print(output1)
