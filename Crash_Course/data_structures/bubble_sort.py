@@ -9,7 +9,8 @@ class BubbleSort():
         """ it defines a bubble sort function."""
         #for i in range(len(self.list1) - 1):
         for i in range(len(self.list1) - 1):
-            for j in range(len(self.list1) - 1):
+            # for j in range(len(self.list1) - 1):   # this works too
+            for j in range(len(self.list1) - 1 - i):  # more efficient approach, in each iteartion comparison reduces by 1
                 if (self.list1[j] > self.list1[j + 1]):
                     # swap them out
                     temp = self.list1[j]
