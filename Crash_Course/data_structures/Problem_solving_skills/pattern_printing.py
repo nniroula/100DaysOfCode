@@ -13,10 +13,11 @@ class PatternPrinting():
         self.number = number
 
     def print_pattern(self):
+        """ To print pattern. """
         for i in range(1, 2):
             for j in range(1, self.number + 1):
                 print('*' * j) 
-
+                
 obj1 = PatternPrinting(5)
 output1 = obj1.print_pattern()
 print(output1)
