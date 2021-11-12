@@ -33,6 +33,7 @@ class BinarySearch():
         self.num = num
         self.starting_index = 0
         self.ending_index = len(self.list1) - 1
+        self.list1.sort()
     
     def binary_search(self):
         found = False
@@ -50,6 +51,6 @@ class BinarySearch():
         return found
 
 arr = [2, 4, 6, 8]
-obj1 = BinarySearch(arr, 2)
+obj1 = BinarySearch(arr, 8)
 output1 = obj1.binary_search()
 print(output1)
