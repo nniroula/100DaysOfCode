@@ -26,6 +26,7 @@ print(result1)
 # binary search algo
   #arr = [2, 4, 6, 8], search 4.
 
+"""
 class BinarySearch():
 
     def __init__(self, list1, num):
@@ -53,4 +54,31 @@ class BinarySearch():
 arr = [2, 4, 6, 8]
 obj1 = BinarySearch(arr, 8)
 output1 = obj1.binary_search()
+print(output1)
+
+
+"""
+
+# sorting algorithms 
+#1 bubble sort
+# [2, 3, 1, 6, 4, 5, 9, 8]
+
+class BubbleSort():
+    def __init__(self, arr):
+        self.arr = arr
+
+    def bubble_sort(self):
+        for j in range(len(self.arr) - 1):
+        # for j in range(1):
+            for i in range(len(self.arr) - 1 - j):
+                if (self.arr[i] > self.arr[i + 1]):
+                    temp = self.arr[i]
+                    self.arr[i] = self.arr[i + 1]
+                    self.arr[i + 1] = temp
+        return self.arr
+
+# object
+arr1 = [2, 3, 1, 6, 4, 5, 9, 8]
+obj1 = BubbleSort(arr1)
+output1 = obj1.bubble_sort()
 print(output1)
