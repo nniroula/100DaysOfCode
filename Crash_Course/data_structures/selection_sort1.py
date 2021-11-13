@@ -20,13 +20,13 @@ class SelectionSort1():
                     self.list1[j] = temp 
         return self.list1
 
-list1 = [7, 4, 10, 8, 3, 1]
-obj1 = SelectionSort1(list1)
-output = obj1.selection_sort()
-print(output)
+# list1 = [7, 4, 10, 8, 3, 1]
+# obj1 = SelectionSort1(list1)
+# output = obj1.selection_sort()
+# print(output)
 
-list2 = [8, 10, 4, 2, 6]
-obj2 = SelectionSort1(list2)
-output2 = obj2.selection_sort()
-print(output2)
+# list2 = [8, 10, 4, 2, 6]
+# obj2 = SelectionSort1(list2)
+# output2 = obj2.selection_sort()
+# print(output2)
 
