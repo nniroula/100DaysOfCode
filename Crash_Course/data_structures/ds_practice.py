@@ -59,6 +59,8 @@ print(output1)
 
 """
 
+
+"""
 # sorting algorithms 
 #1 bubble sort
 # [2, 3, 1, 6, 4, 5, 9, 8]
@@ -82,3 +84,31 @@ arr1 = [2, 3, 1, 6, 4, 5, 9, 8]
 obj1 = BubbleSort(arr1)
 output1 = obj1.bubble_sort()
 print(output1)
+
+"""
+
+# insertion sort
+# divide a list into sorted and unsorted sublist. First element is a sorted list and rest is unsoted sublist.
+# we will need two loops- outer loop- it counts from first element in the list to the end of the list
+# inner loop, it decrements from the index of last sorted element to zero
+
+class InsertionSort():
+
+    def __init__(self, arr):
+        self.arr = arr 
+
+    def insertion_sort(self):
+        for i in range(1, len(self.arr)): # goes up to 1 less than the length of an array
+            j = i - 1
+            current_value = self.arr[i]  # temp value
+            while current_value < self.arr[j] and j>= 0:
+                self.arr[j + 1] = self.arr[j]
+                j = j - 1
+            self.arr[j + 1] = current_value
+        return self.arr
+
+# instantiate the class
+arr = [5, 4, 10, 1, 6, 2]
+obj1 = InsertionSort(arr)
+result1 = obj1.insertion_sort()
+print(result1)
